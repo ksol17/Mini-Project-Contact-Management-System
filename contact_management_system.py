@@ -8,17 +8,6 @@ contacts = {}
 phone_pattern = re.compile(r"^\+?[0-9]{10,15}$")
 email_pattern = re.compile(r"^[\w\.-]+@[\w\.-]+\.\w+$")
 
-def display_menu():
-    print("\nWelcome to the Contact Management System!")
-    print("1. Add a new contact")
-    print("2. Edit an existing contact")
-    print("3. Delete a contact")
-    print("4. Search for a contact")
-    print("5. Display all contacts")
-    print("6. Export contacts to a text file")
-    print("7. Import contacts from a text file")
-    print("8. Quit")
-
 def get_valid_input(prompt, pattern=None, allow_blank=False):
     while True:
         user_input = input(prompt).strip()
@@ -112,6 +101,18 @@ def import_contacts(filename="contacts.txt"):
         print("Contacts imported.")
     except Exception as e:
         print(f"Error importing contacts: {e}")
+
+def display_menu():
+    print("\nWelcome to the Contact Management System!")
+    print("1. Add a new contact")
+    print("2. Edit an existing contact")
+    print("3. Delete a contact")
+    print("4. Search for a contact")
+    print("5. Display all contacts")
+    print("6. Export contacts to a text file")
+    print("7. Import contacts from a text file")
+    print("8. Quit")
+
 
 def main():
     while True:
